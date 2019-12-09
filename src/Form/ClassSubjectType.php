@@ -30,8 +30,8 @@ class ClassSubjectType extends AbstractType
                 'subject',
                 EntityType::class,
                 [
-                    'choice_label' => 'name',
-                    'class' => Subject::class,
+                    'choice_label'  => 'name',
+                    'class'         => Subject::class,
                     'query_builder' => function (EntityRepository $repository) use ($options) {
                         return $repository->createQueryBuilder('c')
                             ->where('c.deletedAt is NULL')
@@ -56,7 +56,7 @@ class ClassSubjectType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => ClassSubject::class,
-            'user' => null,
+            'user'       => null,
         ]);
     }
 }

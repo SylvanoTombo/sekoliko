@@ -38,7 +38,7 @@ class ScolariteController extends AbstractBaseController
             'admin/content/Scolarite/scolarite/_list_scolarite.html.twig',
             [
                 'scolarites' => $repository->findBySchoolYear($this->getUser(), $type),
-                'types' => $type,
+                'types'      => $type,
             ]
         );
     }

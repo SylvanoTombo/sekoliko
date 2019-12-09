@@ -31,10 +31,10 @@ class SchoolYearType extends AbstractType
                 'startDate',
                 DateTimeType::class,
                 [
-                    'label' => 'Date début',
+                    'label'  => 'Date début',
                     'widget' => 'single_text',
-                    'html5' => false,
-                    'attr' => [
+                    'html5'  => false,
+                    'attr'   => [
                         'class' => 'datetimepicker',
                     ],
                     'format' => 'Y-m-d H:i',
@@ -44,10 +44,10 @@ class SchoolYearType extends AbstractType
                 'endDate',
                 DateTimeType::class,
                 [
-                    'label' => 'Date fin',
+                    'label'  => 'Date fin',
                     'widget' => 'single_text',
-                    'html5' => false,
-                    'attr' => [
+                    'html5'  => false,
+                    'attr'   => [
                         'class' => 'datetimepicker',
                     ],
                     'format' => 'Y-m-d H:i',

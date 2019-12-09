@@ -33,10 +33,10 @@ class ScolariteType extends AbstractType
                 'dateCreate',
                 DateTimeType::class,
                 [
-                    'html5' => false,
+                    'html5'  => false,
                     'widget' => 'single_text',
-                    'label' => 'Date d\'entrer',
-                    'attr' => [
+                    'label'  => 'Date d\'entrer',
+                    'attr'   => [
                         'class' => 'datetimepicker',
                     ],
                     'format' => 'Y-m-d H:i',
@@ -73,10 +73,10 @@ class ScolariteType extends AbstractType
                 'dateCin',
                 DateTimeType::class,
                 [
-                    'label' => 'Date CIN',
+                    'label'  => 'Date CIN',
                     'widget' => 'single_text',
-                    'html5' => false,
-                    'attr' => [
+                    'html5'  => false,
+                    'attr'   => [
                         'class' => 'datetimepicker',
                     ],
                     'format' => 'Y-m-d H:i',
@@ -100,7 +100,7 @@ class ScolariteType extends AbstractType
                 'salary',
                 TextType::class,
                 [
-                    'label' => 'Montant salaires',
+                    'label'    => 'Montant salaires',
                     'required' => false,
                 ]
             )
@@ -121,7 +121,7 @@ class ScolariteType extends AbstractType
         $resolver->setDefaults(
             [
                 'data_class' => Scolarite::class,
-                'users' => null,
+                'users'      => null,
             ]
         );
     }

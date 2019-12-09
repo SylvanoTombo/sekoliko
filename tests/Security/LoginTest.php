@@ -1,6 +1,6 @@
 <?php
 /**
- * Julien Rajerison <julienrajerison5@gmail.com>
+ * Julien Rajerison <julienrajerison5@gmail.com>.
  **/
 
 namespace App\Tests\Security;
@@ -9,9 +9,7 @@ use Generator;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
- * Class LoginTest
- *
- * @package App\Tests\Security
+ * Class LoginTest.
  */
 class LoginTest extends WebTestCase
 {

@@ -49,10 +49,10 @@ class UserType extends AbstractType
                 'birthDate',
                 DateTimeType::class,
                 [
-                    'label' => 'Date de naissance',
+                    'label'  => 'Date de naissance',
                     'widget' => 'single_text',
-                    'html5' => false,
-                    'attr' => [
+                    'html5'  => false,
+                    'attr'   => [
                         'class' => 'datetimepicker',
                     ],
                     'format' => 'Y-m-d H:i',
@@ -62,20 +62,20 @@ class UserType extends AbstractType
                 'birthLocale',
                 TextType::class,
                 [
-                    'label'=>'Lieu de naissance',
-                    'required'=>false,
+                    'label'   => 'Lieu de naissance',
+                    'required'=> false,
                 ]
             )
             ->add(
                 'photo',
                 FileType::class,
                 [
-                    'label' => 'Photo de l\'utilisateur',
-                    'mapped' => false,
-                    'required' => false,
+                    'label'       => 'Photo de l\'utilisateur',
+                    'mapped'      => false,
+                    'required'    => false,
                     'constraints' => [
                         new File([
-                            'maxSize' => '1024k',
+                            'maxSize'          => '1024k',
                             'mimeTypesMessage' => 'Please upload a valid Images document',
                         ]),
                     ],
@@ -85,7 +85,7 @@ class UserType extends AbstractType
                 'imatriculation',
                 TextType::class,
                 [
-                    'label' => 'Imatriculation de l\'utilisateur',
+                    'label'    => 'Imatriculation de l\'utilisateur',
                     'required' => 'required',
                 ]
             )
@@ -101,7 +101,7 @@ class UserType extends AbstractType
                 ChoiceType::class,
                 [
                     'choices' => [
-                        'Male' => 'Male',
+                        'Male'  => 'Male',
                         'Femme' => 'Femme',
                     ],
                 ]

@@ -56,7 +56,7 @@ class RoomController extends AbstractBaseController
             'admin/content/Room/room_reservation_list.html.twig',
             [
                 'reservations' => $list,
-                'room' => $room,
+                'room'         => $room,
             ]
         );
     }

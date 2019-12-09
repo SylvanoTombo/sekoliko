@@ -387,7 +387,7 @@ class Administrator
      *
      * @return Administrator
      */
-    public function setNoteLibre(?string $noteLibre): Administrator
+    public function setNoteLibre(?string $noteLibre): self
     {
         $this->noteLibre = $noteLibre;
 

@@ -11,8 +11,8 @@ namespace App\Constant;
 class EtudiantStatusConstant
 {
     public const STUDENT_STATUS = [
-        'Passant' => 'Passant',
+        'Passant'    => 'Passant',
         'Redoublant' => 'Redoublant',
-        'Transfert' => 'Transfert',
+        'Transfert'  => 'Transfert',
     ];
 }

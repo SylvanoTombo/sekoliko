@@ -32,7 +32,6 @@ class HistoryRepository extends ServiceEntityRepository
             ->setParameter('val', $user)
             ->orderBy('h.id', 'ASC')
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
     }
 }

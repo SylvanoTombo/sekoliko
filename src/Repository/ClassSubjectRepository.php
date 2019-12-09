@@ -36,7 +36,6 @@ class ClassSubjectRepository extends ServiceEntityRepository
             ->setParameter('class', $class)
             ->orderBy('sc.id', 'ASC')
             ->getQuery()
-            ->getResult()
-            ;
+            ->getResult();
     }
 }

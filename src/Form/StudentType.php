@@ -33,22 +33,22 @@ class StudentType extends AbstractType
                 'classe',
                 EntityType::class,
                 [
-                    'label' => 'Classe',
-                    'class' => ClassRoom::class,
+                    'label'         => 'Classe',
+                    'class'         => ClassRoom::class,
                     'query_builder' => function (EntityRepository $repository) use ($options) {
                         return $repository->createQueryBuilder('c')
                             ->andWhere('c.etsName = :etsName')
                             ->setParameter('etsName', $options['etsName']);
                     },
                     'choice_label' => 'name',
-                    'data' => $options['classe'],
+                    'data'         => $options['classe'],
                 ]
             )
             ->add(
                 'contact',
                 TextType::class,
                 [
-                    'label' => 'Contact téléphonique',
+                    'label'    => 'Contact téléphonique',
                     'required' => false,
                 ]
             )
@@ -56,7 +56,7 @@ class StudentType extends AbstractType
                 'adresse',
                 TextType::class,
                 [
-                    'label' => 'Adresse exacte',
+                    'label'    => 'Adresse exacte',
                     'required' => false,
                 ]
             )
@@ -64,7 +64,7 @@ class StudentType extends AbstractType
                 'contactParent',
                 TextType::class,
                 [
-                    'label' => 'Contact téléphonique parentale ou parain',
+                    'label'    => 'Contact téléphonique parentale ou parain',
                     'required' => false,
                 ]
             )
@@ -72,7 +72,7 @@ class StudentType extends AbstractType
                 'adresseParent',
                 TextType::class,
                 [
-                    'label' => 'Adresse parentale ou parain',
+                    'label'    => 'Adresse parentale ou parain',
                     'required' => false,
                 ]
             )
@@ -80,8 +80,8 @@ class StudentType extends AbstractType
                 'status',
                 ChoiceType::class,
                 [
-                    'label' => 'Status de l\'étudiant',
-                    'choices' => EtudiantStatusConstant::STUDENT_STATUS,
+                    'label'    => 'Status de l\'étudiant',
+                    'choices'  => EtudiantStatusConstant::STUDENT_STATUS,
                     'required' => false,
                 ]
             )
@@ -89,7 +89,7 @@ class StudentType extends AbstractType
                 'noteLibre',
                 TextareaType::class,
                 [
-                    'label' => 'Note libre',
+                    'label'    => 'Note libre',
                     'required' => false,
                 ]
             );
@@ -100,8 +100,8 @@ class StudentType extends AbstractType
         $resolver->setDefaults(
             [
                 'data_class' => Student::class,
-                'etsName' => null,
-                'classe' => null,
+                'etsName'    => null,
+                'classe'     => null,
             ]
         );
     }

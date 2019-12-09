@@ -39,14 +39,14 @@ class AdministratorType extends AbstractType
                 'type',
                 EntityType::class,
                 [
-                    'class' => AdministrationType::class,
+                    'class'         => AdministrationType::class,
                     'query_builder' => function (EntityRepository $repository) use ($options) {
                         return $repository->createQueryBuilder('a')
                             ->andWhere('a.etsName = :etsName')
                             ->setParameter('etsName', $options['etsName']);
                     },
                     'choice_label' => 'libelle',
-                    'label' => 'Poste',
+                    'label'        => 'Poste',
                 ]
             )
             ->add(
@@ -60,10 +60,10 @@ class AdministratorType extends AbstractType
                 'dateCreate',
                 DateTimeType::class,
                 [
-                    'label' => 'Date d\'entrer',
+                    'label'  => 'Date d\'entrer',
                     'widget' => 'single_text',
-                    'html5' => false,
-                    'attr' => [
+                    'html5'  => false,
+                    'attr'   => [
                         'class' => 'datetimepicker',
                     ],
                     'format' => 'Y-m-d H:i',
@@ -100,10 +100,10 @@ class AdministratorType extends AbstractType
                 'dateCin',
                 DateTimeType::class,
                 [
-                    'label' => 'Date CIN',
+                    'label'  => 'Date CIN',
                     'widget' => 'single_text',
-                    'html5' => false,
-                    'attr' => [
+                    'html5'  => false,
+                    'attr'   => [
                         'class' => 'datetimepicker',
                     ],
                     'format' => 'Y-m-d H:i',
@@ -127,7 +127,7 @@ class AdministratorType extends AbstractType
                 'salary',
                 TextType::class,
                 [
-                    'label' => 'Montant salaires',
+                    'label'    => 'Montant salaires',
                     'required' => false,
                 ]
             )
@@ -148,7 +148,7 @@ class AdministratorType extends AbstractType
         $resolver->setDefaults(
             [
                 'data_class' => Administrator::class,
-                'etsName' => null,
+                'etsName'    => null,
             ]
         );
     }

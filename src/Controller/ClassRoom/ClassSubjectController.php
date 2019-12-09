@@ -39,7 +39,7 @@ class ClassSubjectController extends AbstractBaseController
             'admin/content/ClassRoom/_class_subject_list.html.twig',
             [
                 'subjects' => $repository->findByClass($this->getUser(), $classRoom),
-                'class' => $classRoom,
+                'class'    => $classRoom,
             ]
         );
     }
@@ -60,6 +60,7 @@ class ClassSubjectController extends AbstractBaseController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $subject->setClassRoom($classe);
+
             try {
                 if ($this->em->save($subject, $this->getUser())) {
                     $this->addFlash(MessageConstant::SUCCESS_TYPE, MessageConstant::AJOUT_MESSAGE);
@@ -77,7 +78,7 @@ class ClassSubjectController extends AbstractBaseController
         return $this->render(
             'admin/content/ClassRoom/_class_subject_manage.html.twig',
             [
-                'form' => $form->createView(),
+                'form'   => $form->createView(),
                 'classe' => $classe,
             ]
         );

@@ -50,9 +50,9 @@ class ClassRoomController extends AbstractBaseController
      * @param Section   $section
      * @param ClassRoom $classRoom
      *
-     * @return Response
-     *
      * @throws Exception
+     *
+     * @return Response
      */
     public function manage(Request $request, Section $section, ClassRoom $classRoom = null): Response
     {
@@ -77,7 +77,7 @@ class ClassRoomController extends AbstractBaseController
         return $this->render(
             'admin/content/ClassRoom/_class_room_manage.html.twig',
             [
-                'form' => $form->createView(),
+                'form'    => $form->createView(),
                 'section' => $section,
             ]
         );

@@ -30,7 +30,7 @@ class HistoryController extends AbstractBaseController
             'admin/content/History/_history.html.twig',
             [
                 'histories' => $repository->userHistory($user),
-                'user' => $user,
+                'user'      => $user,
             ]
         );
     }

@@ -30,8 +30,8 @@ class ReservationType extends AbstractType
                 DateTimeType::class,
                 [
                     'widget' => 'single_text',
-                    'html5' => false,
-                    'attr' => [
+                    'html5'  => false,
+                    'attr'   => [
                         'class' => 'datetimepicker',
                     ],
                     'label' => 'Début réservations',
@@ -42,8 +42,8 @@ class ReservationType extends AbstractType
                 DateTimeType::class,
                 [
                     'widget' => 'single_text',
-                    'html5' => false,
-                    'attr' => [
+                    'html5'  => false,
+                    'attr'   => [
                         'class' => 'datetimepicker',
                     ],
                     'label' => 'Fin réservations',

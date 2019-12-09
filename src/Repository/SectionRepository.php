@@ -38,7 +38,6 @@ class SectionRepository extends ServiceEntityRepository
             ->setParameter('ets', $user->getEtsName())
             ->orderBy('s.id', 'ASC')
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
     }
 }
